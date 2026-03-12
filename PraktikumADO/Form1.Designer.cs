@@ -81,6 +81,7 @@
             this.btnHitungMk.TabIndex = 4;
             this.btnHitungMk.Text = "Hitung Mk";
             this.btnHitungMk.UseVisualStyleBackColor = true;
+            this.btnHitungMk.Click += new System.EventHandler(this.btnHitungMK_Click);
             // 
             // btnUpdate
             // 
