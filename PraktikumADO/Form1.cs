@@ -123,7 +123,24 @@ namespace PraktikumADO
 
         private void btnUpdateMK_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Koneksi();
+                conn.Open();
 
+                string query = "UPDATE MataKuliah SET SKS = 4 WHERE KodeMK = 'IF210101'";
+                cmd = new SqlCommand(query, conn);
+
+                int hasil = cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Jumlah data yang diupdate : " + hasil);
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnInsertProdi_Click(object sender, EventArgs e)
@@ -155,6 +172,11 @@ namespace PraktikumADO
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
