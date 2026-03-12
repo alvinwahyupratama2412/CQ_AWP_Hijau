@@ -15,6 +15,13 @@ namespace PraktikumADO
     {
         SqlConnection conn;
         SqlCommand cmd;
+
+        private void Koneksi()
+        {
+            conn = new SqlConnection(
+               "Data Source=LAPTOP-5BS6SFFN\\ALVIN;Initial Catalog=DBAkademikADO;Integrated Security=True"
+            );
+        }
         public Form1()
         {
             InitializeComponent();
